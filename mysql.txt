@@ -1,0 +1,82 @@
+MySQL Database and Data Analysis
+Database Import
+The SQL database dump is provided in the db_dump.sql file. To set up the database on your local machine:
+
+Download the db_dump.sql file to your computer.
+Import the SQL file into your MySQL server following the instructions provided in the tutorial video.
+Data Cleaning and Analysis
+After importing the data into MySQL, I have further cleaned and transformed it using Tableau for enhanced analysis. Below are the SQL queries used to explore and analyze the data:
+
+Show all customer records:
+
+sql
+Copy code
+SELECT * FROM customers;
+Retrieves all records from the customers table.
+
+Show total number of customers:
+
+sql
+Copy code
+SELECT count(*) FROM customers;
+Provides the total count of customers in the customers table.
+
+Show transactions for the Chennai market (market code 'Mark001'):
+
+sql
+Copy code
+SELECT * FROM transactions WHERE market_code='Mark001';
+Lists all transactions associated with the Chennai market.
+
+Show distinct product codes sold in Chennai:
+
+sql
+Copy code
+SELECT DISTINCT product_code FROM transactions WHERE market_code='Mark001';
+Displays unique product codes from transactions in Chennai.
+
+Show transactions where currency is US dollars:
+
+sql
+Copy code
+SELECT * FROM transactions WHERE currency='USD';
+Filters transactions where the currency is USD.
+
+Show transactions for the year 2020 (joined with the date table):
+
+sql
+Copy code
+SELECT transactions.*, date.* FROM transactions
+INNER JOIN date ON transactions.order_date=date.date
+WHERE date.year=2020;
+Combines transactions with the date table to show records for the year 2020.
+
+Show total revenue for the year 2020:
+
+sql
+Copy code
+SELECT SUM(transactions.sales_amount) FROM transactions
+INNER JOIN date ON transactions.order_date=date.date
+WHERE date.year=2020 AND (transactions.currency='INR' OR transactions.currency='USD');
+Calculates the total revenue for 2020, including both INR and USD currencies.
+
+Show total revenue for January 2020:
+
+sql
+Copy code
+SELECT SUM(transactions.sales_amount) FROM transactions
+INNER JOIN date ON transactions.order_date=date.date
+WHERE date.year=2020 AND date.month_name='January'
+AND (transactions.currency='INR' OR transactions.currency='USD');
+Computes the total revenue for January 2020, considering both INR and USD currencies.
+
+Show total revenue for the year 2020 in Chennai:
+
+sql
+Copy code
+SELECT SUM(transactions.sales_amount) FROM transactions
+INNER JOIN date ON transactions.order_date=date.date
+WHERE date.year=2020 AND transactions.market_code='Mark001';
+Determines the total revenue for Chennai in 2020.
+
+These queries are designed to provide a comprehensive view of the data, which was further analyzed and visualized in Tableau for deeper insights.
