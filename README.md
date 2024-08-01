@@ -2,7 +2,7 @@
 
 ## Overview
 
-This Tableau project for Atliq, a hardware company in Gujrat, provides real-time dashboards showing revenue breakdown by city and year, as well as insights into the top 5 products and customers. The interactive dashboards support IT, data analytics, and sales teams by automating insights, improving decision-making, and saving time on manual data checks. Designed to help monitor performance and optimize sales strategies, the project features multiple interconnected tables for a comprehensive view of the company's sales operations.
+This Tableau project for Atliq, a hardware company in Gujrat, provides real-time dashboards showing revenue breakdown by city and year, as well as insights into the top 5 products and customers and more. The interactive dashboards support IT, data analytics, and sales teams by automating insights, improving decision-making, and saving time on manual data checks. Designed to help monitor performance and optimize sales strategies, the project features multiple interconnected tables for a comprehensive view of the company's sales operations.
 
 ## Dashboard Preview
 
@@ -34,7 +34,7 @@ The dataset includes several tables: **Customers** for customer details, **Date*
 
 1. **Download Tableau Desktop**: Install from the official Tableau website.
 2. **Clone This Repository**: Access the files from this repository.
-3. **Open Dashboard**: Load `Atliq_Hardware_Sales_Dashboard.tdsx` in Tableau Desktop.
+3. **Open Dashboard**: Load `Sales_Insight_Dashboard_Atliq.tdsx` in Tableau Desktop.
 4. **Interact**: Explore the dashboards to analyze sales data.
 
 ## Contact
